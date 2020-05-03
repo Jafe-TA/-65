@@ -1,0 +1,44 @@
+<!--
+
+- Mostrar un elemento de tipo H1, luego cuando se ingrese con el mouse dentro del mismo cambiar 
+el color a letra roja y color de fondo amarillo, luego cuando se mueva la flecha del mouse fuera del elemento volver al color original.
+
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejemplo de JavaScript</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+  <h1 style="color:#0000ff" id="recuadro1"> Holaa
+  </h1>
+
+<script>
+  addEventListener('DOMContentLoaded',inicio,false);
+
+  function inicio()
+  {
+    document.getElementById('recuadro1').addEventListener('mouseover',entrada,false);
+    document.getElementById('recuadro1').addEventListener('mouseout',salida,false);
+  }
+
+  function entrada()
+  {
+    document.getElementById('recuadro1').style.color='#ff0000';
+    document.getElementById('recuadro1').style.backgroundColor='#ffff00';
+  }
+
+  function salida()
+  {
+    document.getElementById('recuadro1').style.color='#0000ff';
+    document.getElementById('recuadro1').style.backgroundColor='#ffffff';
+}
+</script>
+  
+</body>
+</html>
+
+
+
